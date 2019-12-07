@@ -26,13 +26,13 @@ const App = () => {
       setUser(user);
       setPopout(null);
     }
-    async function fetchData2() {
-      const geopos = await connect.sendPromise("VKWebAppGeodataResult");
-      setGEO(geopos);
-      setPopout(null);
-    }
+    // async function fetchData2() {
+    //   const geopos = await connect.sendPromise("VKWebAppGeodataResult");
+    //   setGEO(geopos);
+    //   setPopout(null);
+    // }
+    // fetchData2();
     fetchData();
-    fetchData2();
   }, []);
 
   const go = e => {
