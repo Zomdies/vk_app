@@ -8,7 +8,7 @@ import Cell from "@vkontakte/vkui/dist/components/Cell/Cell";
 import Div from "@vkontakte/vkui/dist/components/Div/Div";
 import Avatar from "@vkontakte/vkui/dist/components/Avatar/Avatar";
 
-const Home = ({ id, go, fetchedUser, fetchedGEO }) => (
+const Home = ({ id, go, fetchedUser }) => (
   <Panel id={id}>
     <PanelHeader>Welcome Weather App</PanelHeader>
     {fetchedUser && (
@@ -27,13 +27,6 @@ const Home = ({ id, go, fetchedUser, fetchedGEO }) => (
         >
           {`${fetchedUser.first_name} ${fetchedUser.last_name}`}
         </Cell>
-        <Group titel="GEO POS">
-          <Cell
-          // before={fetchedGEO.available ? <p>{fetchedGEO.available}</p> : null}
-          >
-            {/* {fetchedGEO.available} */}
-          </Cell>
-        </Group>
       </Group>
     )}
 
