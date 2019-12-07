@@ -27,10 +27,12 @@ const App = () => {
       setPopout(null);
     }
     async function fetchData2() {
-      const geo = await connect.sendPromise("VKWebAppGetGeodata");
-      connect.send("VKWebAppAllowNotifications", {});
-      setGEO(geo);
-      setPopout(null);
+      const flag = await connect.sendPromise("VKWebAppAllowNotifications");
+      if (flag.data.result == true) {
+        const geo = await connect.sendPromise("VKWebAppGetGeodata");
+        setGEO(geo);
+        setPopout(null);
+      }
     }
 
     fetchData();
