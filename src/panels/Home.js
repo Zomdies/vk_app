@@ -31,7 +31,7 @@ const Home = ({ id, go, fetchedUser, fetchedGEO }) => (
           <Cell
           // before={fetchedGEO.available ? <p>{fetchedGEO.available}</p> : null}
           >
-            {fetchedGEO.available}
+            {/* {fetchedGEO.available} */}
           </Cell>
         </Group>
       </Group>
