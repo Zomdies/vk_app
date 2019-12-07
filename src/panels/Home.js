@@ -12,7 +12,7 @@ const Home = ({ id, go, fetchedUser }) => (
   <Panel id={id}>
     <PanelHeader>Welcome Weather App</PanelHeader>
     {fetchedUser && (
-      <Group title="User Data Fetched with VK Connect">
+      <Group title="Personal Details">
         <Cell
           before={
             fetchedUser.photo_200 ? (
@@ -30,7 +30,7 @@ const Home = ({ id, go, fetchedUser }) => (
       </Group>
     )}
 
-    <Group title="Personal Details">
+    <Group title="Button Case">
       <Div>
         <Button size="xl" level="2" onClick={go} data-to="persik">
           Show me cat, please
