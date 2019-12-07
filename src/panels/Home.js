@@ -28,8 +28,10 @@ const Home = ({ id, go, fetchedUser, fetchedGEO }) => (
           {`${fetchedUser.first_name} ${fetchedUser.last_name}`}
         </Cell>
         <Group titel="GEO POS">
-          <Cell>
-            before={fetchedGEO.available ? <p>{fetchedGEO.available}</p> : ""}
+          <Cell
+          // before={fetchedGEO.available ? <p>{fetchedGEO.available}</p> : null}
+          >
+            {fetchedGEO.available}
           </Cell>
         </Group>
       </Group>
