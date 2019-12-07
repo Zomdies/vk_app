@@ -44,7 +44,7 @@ const App = () => {
       <Home
         id="home"
         fetchedUser={fetchedUser}
-        fetchedGEO={fetchedGEO}
+        // fetchedGEO={fetchedGEO}
         go={go}
       />
       <Persik id="persik" go={go} />
