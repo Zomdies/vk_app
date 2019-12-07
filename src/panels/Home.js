@@ -30,7 +30,18 @@ const Home = ({ id, go, fetchedUser, fetchedGEO }) => (
       </Group>
     )}
     <Group title="GEO">
-      <Cell>{fetchedGEO ? `${fetchedGEO.available}` : ""}</Cell>
+      {fetchedGEO && (
+        <Cell>
+          {fetchedGEO.available ? (
+            <div>
+              <p>{fetchedGEO.lat}</p>
+              <p>{fetchedGEO.long}</p>
+            </div>
+          ) : (
+            "Sorry App can't get geo dates"
+          )}
+        </Cell>
+      )}
     </Group>
 
     <Group title="Navigation Example">
